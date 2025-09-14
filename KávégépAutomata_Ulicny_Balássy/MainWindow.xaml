@@ -1,0 +1,35 @@
+﻿<Window x:Class="KávégépAutomata_Ulicny_Balássy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KávégépAutomata_Ulicny_Balássy"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="700" Width="500" Background="RosyBrown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Name="osszeg" HorizontalAlignment="Left" Margin="299,83,0,0" TextWrapping="Wrap" Text="Fizetendő" VerticalAlignment="Top" Width="145" FontSize="20" Height="54" Foreground="#FF00F104" Background="Black" TextChanged="osszeg_TextChanged" Grid.RowSpan="2"/>
+        <Button  Name="Espresso" Content="Espresso" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Espresso_Click" Grid.RowSpan="2"/>
+        <Button  Name="Americano" Content="Americano" HorizontalAlignment="Left" Margin="85,83,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Americano_Click" Grid.RowSpan="2"/>
+        <Button  Name="Cappuccino" Content="Cappuccino" HorizontalAlignment="Left" Margin="160,83,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Cappuccino_Click" Grid.RowSpan="2"/>
+        <Button  Name="Latte" Content="Latte" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Latte_Click" Grid.RowSpan="2"/>
+        <Button  Name="Macchiato" Content="Macchiato" HorizontalAlignment="Left" Margin="85,138,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Macchiato_Click" Grid.RowSpan="2"/>
+        <Button  Name="White" Content="Flat White" HorizontalAlignment="Left" Margin="160,138,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="White_Click" Grid.RowSpan="2"/>
+        <Button  Name="Mocha" Content="Mocha" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Mocha_Click" Grid.RowSpan="2"/>
+        <Button  Name="Cortado" Content="Cortado" HorizontalAlignment="Left" Margin="85,193,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Cortado_Click" Grid.RowSpan="2"/>
+        <Button  Name="Ristretto" Content="Ristretto" HorizontalAlignment="Left" Margin="160,193,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Ristretto_Click" Grid.RowSpan="2"/>
+        <Button  Name="Affogato" Content="Affogato" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Affogato_Click" Grid.RowSpan="2"/>
+        <Button  Name="IcedCoffee" Content="Iced Coffee" HorizontalAlignment="Left" Margin="85,248,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="IcedCoffee_Click" Grid.RowSpan="2"/>
+        <Button  Name="IcedLatte" Content="Iced Latte" HorizontalAlignment="Left" Margin="160,248,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="IcedLatte_Click" Grid.RowSpan="2"/>
+        <Button  Name="HotCocoa" Content="HOT Cocoa" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" Height="50" Width="220" Click="HotCocoa_Click" Grid.RowSpan="2"/>
+        <Button  Name="Pay" Content="Pay" HorizontalAlignment="Left" Margin="374,142,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Pay_Click" Grid.RowSpan="2"/>
+        <Button  Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="299,142,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Reset_Click" Grid.RowSpan="2"/>
+
+
+
+    </Grid>
+</Window>

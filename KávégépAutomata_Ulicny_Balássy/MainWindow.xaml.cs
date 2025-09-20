@@ -25,6 +25,7 @@ namespace KávégépAutomata_Ulicny_Balássy
         private int kakaopor;
         private void Raktar()
         {
+
             string[] raktar = File.ReadAllLines("raktar.txt"); // beolvassuk a fájlt és eltároljuk egy tömbben
             
             foreach (string sor in raktar)//átmegyünk a fájl tartalmán
@@ -234,7 +235,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             return false;
         }
         //Innentől jönnek az italok
-        private void Espresso_Click(object sender, RoutedEventArgs e) //Ez egy teszt volt
+        private void Espresso_Click(object sender, RoutedEventArgs e)
         {
             
             
@@ -445,7 +446,7 @@ namespace KávégépAutomata_Ulicny_Balássy
         }
 
         //nap végi mennyiségek kiírása
-        private void MentesStatisztika()
+        private void Statisztika()
         {
             //tömmbe eltároljuk
             string[] sorok =
@@ -463,7 +464,7 @@ namespace KávégépAutomata_Ulicny_Balássy
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MentesStatisztika();// Akkor csinálja meg a fájlt, ha bezárjuk
+            Statisztika();// Akkor csinálja meg a fájlt, ha bezárjuk
         }
     }
 }

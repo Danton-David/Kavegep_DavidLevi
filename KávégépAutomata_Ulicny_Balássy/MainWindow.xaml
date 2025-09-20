@@ -13,7 +13,7 @@
             <RowDefinition Height="0*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox Name="osszeg" HorizontalAlignment="Left" Margin="299,83,0,0" TextWrapping="Wrap" Text="Fizetendő" VerticalAlignment="Top" Width="145" FontSize="20" Height="54" Foreground="#FF00F104" Background="Black" TextChanged="osszeg_TextChanged" Grid.RowSpan="2"/>
+        <TextBox Name="osszeg" HorizontalAlignment="Left" Margin="299,134,0,0" TextWrapping="Wrap" Text="Fizetendő" VerticalAlignment="Top" Width="145" FontSize="20" Height="54" Foreground="#FF00F104" Background="Black" TextChanged="osszeg_TextChanged" Grid.RowSpan="2" TextAlignment="Center"/>
         <Button  Name="Espresso" Content="Espresso" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Espresso_Click" Grid.RowSpan="2"/>
         <Button  Name="Americano" Content="Americano" HorizontalAlignment="Left" Margin="85,83,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Americano_Click" Grid.RowSpan="2"/>
         <Button  Name="Cappuccino" Content="Cappuccino" HorizontalAlignment="Left" Margin="160,83,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Cappuccino_Click" Grid.RowSpan="2"/>
@@ -27,8 +27,10 @@
         <Button  Name="IcedCoffee" Content="Iced Coffee" HorizontalAlignment="Left" Margin="85,248,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="IcedCoffee_Click" Grid.RowSpan="2"/>
         <Button  Name="IcedLatte" Content="Iced Latte" HorizontalAlignment="Left" Margin="160,248,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="IcedLatte_Click" Grid.RowSpan="2"/>
         <Button  Name="HotCocoa" Content="HOT Cocoa" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" Height="50" Width="220" Click="HotCocoa_Click" Grid.RowSpan="2"/>
-        <Button  Name="Pay" Content="Pay" HorizontalAlignment="Left" Margin="374,142,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Pay_Click" Grid.RowSpan="2"/>
-        <Button  Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="299,142,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Reset_Click" Grid.RowSpan="2"/>
+        <Button  Name="Pay" Content="Pay" HorizontalAlignment="Left" Margin="374,193,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Pay_Click" Grid.RowSpan="2"/>
+        <Button  Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="299,193,0,0" VerticalAlignment="Top" Height="50" Width="70" Click="Reset_Click" Grid.RowSpan="2"/>
+        <TextBox Name="darabok" HorizontalAlignment="Left" Margin="316,104,0,0" TextWrapping="Wrap" Text="db" VerticalAlignment="Top" Width="110" FontSize="15" Height="25" Foreground="#FF00F104" Background="Black" TextChanged="db_TextChanged" Grid.RowSpan="2" TextAlignment="Center"/>
+        <Button Name="cukorka" Content="Cukor" HorizontalAlignment="Left" Margin="100,358,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Click="cukorka_Click"/>
 
 
 

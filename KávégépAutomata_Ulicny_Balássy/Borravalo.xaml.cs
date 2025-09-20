@@ -20,12 +20,11 @@ namespace KávégépAutomata_Ulicny_Balássy
     public partial class Borravalo : Window
     {
         public double Ertek { get; private set; }
-
         public Borravalo()
         {
             InitializeComponent();
         }
-
+        
         private void confirm_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -33,6 +32,8 @@ namespace KávégépAutomata_Ulicny_Balássy
                 int _egyedi = int.Parse(egyedi.Text);
                 this.Ertek = _egyedi;
                 this.DialogResult = true;
+
+                
             }
             catch { egyedi.Text = "Számot kell megadni!!!!"; }
         }
@@ -40,19 +41,27 @@ namespace KávégépAutomata_Ulicny_Balássy
         private void husz_Click(object sender, RoutedEventArgs e)
         {
             this.Ertek = 20;
-            
+            this.DialogResult = true;
+
+          
+
         }
 
         private void harminc_Click(object sender, RoutedEventArgs e)
         {
             this.Ertek = 35;
             this.DialogResult = true;
+
+           
+
         }
 
         private void ötven_Click(object sender, RoutedEventArgs e)
         {
             this.Ertek = 50;
             this.DialogResult = true;
+
+           
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

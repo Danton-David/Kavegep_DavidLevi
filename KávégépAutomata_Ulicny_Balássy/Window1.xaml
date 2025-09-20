@@ -1,0 +1,14 @@
+﻿<Window x:Class="KávégépAutomata_Ulicny_Balássy.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KávégépAutomata_Ulicny_Balássy"
+        mc:Ignorable="d"
+        Title="Window1" Height="280" Width="480">
+    <Grid>
+        <MediaElement Name="Video" HorizontalAlignment="Center" MediaEnded="Video_MediaEnded" Height="220" Margin="0,0,0,0" VerticalAlignment="Top"  Width="480" Source="PourCoffee.mp4"/>
+
+
+    </Grid>
+</Window>

@@ -45,6 +45,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             }
 
         }
+        private int db = 0;
        
         private double fizetendo = 0; //Ez az aktuális ár amit ki kell fizetni
         private double beszedettpenz = 0; // Ez az amit már beszedtünk pénz a felhasználótól
@@ -56,13 +57,11 @@ namespace KávégépAutomata_Ulicny_Balássy
             InitializeComponent();
             Raktar();// raktárt meghívjuk hogy lehessen is használni
         }
-        private void osszeg_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
         
         private void FrissitFizetendo()// Ez frissíti a kezelőfelületen az árat
         {
+            db++;
+            darabok.Text = db.ToString() + "db";
             osszeg.Text = fizetendo.ToString();
         }
 
@@ -73,15 +72,26 @@ namespace KávégépAutomata_Ulicny_Balássy
             fizetendo = ((fizetendo * (borravalo.Ertek / 100)) + fizetendo); // Ez hozzáadja a százalékot
            
             beszedettpenz += fizetendo;
+            Hide();
+            Payment payment = new Payment(fizetendo);
+            payment.ShowDialog();
+            for (int i = 0; i < db; i++)
+            {
+                Window1 video = new Window1();
+                video.ShowDialog();
+            }
             Statisztika();
             Close();
+            // bezárja a programot
 
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
             fizetendo = 0;
+            db = -1;
             FrissitFizetendo();
+            Raktar();
         }
         //Itt lesznek a receptek:
         private bool EspressoRecept()
@@ -469,6 +479,32 @@ namespace KávégépAutomata_Ulicny_Balássy
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Statisztika();// Akkor csinálja meg a fájlt, ha bezárjuk
+        }
+
+        private void osszeg_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void db_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void cukorka_Click(object sender, RoutedEventArgs e)
+        {
+            if (viz >= 30 && kavepor >= 7)
+            {
+                cukor -= 100;
+                fizetendo += 0.5; // valami ami az ára lessz
+                db--;
+                FrissitFizetendo();
+            }
+            else
+            {
+                cukorka.Background = new SolidColorBrush(Colors.Red); //piros lesz hogy láthatóbb legyen hogy valami baj van
+                osszeg.Text = "Nincs elég alapanyag"; // kiírjuk hogy nincs eleg alapanyag
+            }
         }
     }
 }

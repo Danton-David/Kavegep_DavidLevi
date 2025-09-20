@@ -71,7 +71,11 @@ namespace KávégépAutomata_Ulicny_Balássy
             Borravalo borravalo = new Borravalo();
             borravalo.ShowDialog();//Ez itt a felugró ablak a borravalóra
             fizetendo = ((fizetendo * (borravalo.Ertek / 100)) + fizetendo); // Ez hozzáadja a százalékot
-            FrissitFizetendo();// Ez frissíti a kezelőfelületen az árat
+           
+            beszedettpenz += fizetendo;
+            Statisztika();
+            Close();
+
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e)
@@ -243,7 +247,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 Espresso.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else 
@@ -259,7 +263,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 Americano.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -275,7 +279,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 Cappuccino.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -291,7 +295,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 Latte.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -307,7 +311,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 Macchiato.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -323,7 +327,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 White.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -339,7 +343,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 Mocha.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -355,7 +359,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 Cortado.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -371,7 +375,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 Ristretto.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -387,7 +391,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 Affogato.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -403,7 +407,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 IcedCoffee.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -419,7 +423,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 IcedLatte.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else
@@ -435,7 +439,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             {
                 HotCocoa.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
                 fizetendo += 100; // valami ami az ára lessz
-                beszedettpenz += 100; // az összes pénz amit a nap folyamán összeszedünk
+                
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }
             else

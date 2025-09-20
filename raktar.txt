@@ -1,5 +1,6 @@
-tej 3l
-víz 10l
-kávépor 2kg
-cukor 1kg
-kakaópor 2kg
+tej 3000
+víz 10000
+kávépor 2000
+cukor 1000
+kakaópor 2000
+

@@ -14,6 +14,9 @@ namespace KávégépAutomata_Ulicny_Balássy
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// Ez a program működik
+    /// Kivéve ha nem
+    /// De olyannal nem találkoztunk
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -448,7 +451,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             if (HotCocoaRecept())
             {
                 HotCocoa.Background = new SolidColorBrush(Colors.White); //láthatóbb hogy mit választott már ki a felhasználó
-                fizetendo += 100; // valami ami az ára lessz
+                fizetendo += 250; // valami ami az ára lessz
                 
                 FrissitFizetendo();//Kiírja a fizetendő összeget
             }

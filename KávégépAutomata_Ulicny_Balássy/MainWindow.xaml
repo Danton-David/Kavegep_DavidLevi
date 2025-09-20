@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:KávégépAutomata_Ulicny_Balássy"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="700" Width="500" Background="RosyBrown">
+        Title="MainWindow" Height="700" Width="500" Background="RosyBrown"
+        Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>

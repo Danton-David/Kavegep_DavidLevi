@@ -53,7 +53,7 @@ namespace KávégépAutomata_Ulicny_Balássy
         private double fizetendo = 0; //Ez az aktuális ár amit ki kell fizetni
         private double beszedettpenz = 0; // Ez az amit már beszedtünk pénz a felhasználótól
 
-        public bool elegalapanyag = false; //Ez csak egy place holder an alapanyag check nek
+        public bool elegalapanyag = false; //Ez csak egy place holder an alapanyag check nek (tesztelésre használta az Ulicny)
 
         public MainWindow()
         {

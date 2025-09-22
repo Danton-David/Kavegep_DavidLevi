@@ -16,6 +16,7 @@ namespace KávégépAutomata_Ulicny_Balássy
 {
     /// <summary>
     /// Interaction logic for Payment.xaml
+    /// Gyakorlatilag csak díszzítés, hogy a felhasználó lássa a végösszeget
     /// </summary>
     public partial class Payment : Window
     {
@@ -23,17 +24,17 @@ namespace KávégépAutomata_Ulicny_Balássy
         {
             
             InitializeComponent();
-            vegosszeg.Text = fizetendo.ToString() + "Ft";
+            vegosszeg.Text = fizetendo.ToString() + "Ft"; //A fizetendő összeg megjelenítése a fizetés ablakban
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = true;
+            this.DialogResult = true; //A bezárás gomb megnyomására az ablak bezárul
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = true;
+            this.DialogResult = true; //A bezárás gomb megnyomására az ablak bezárul
         }
 
         private void vegosszeg_TextChanged(object sender, TextChangedEventArgs e)

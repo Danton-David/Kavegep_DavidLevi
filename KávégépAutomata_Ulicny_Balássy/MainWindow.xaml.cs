@@ -63,7 +63,7 @@ namespace KávégépAutomata_Ulicny_Balássy
         
         private void FrissitFizetendo()// Ez frissíti a kezelőfelületen az árat
         {
-            db++;
+            db++; // minden egyes ital választásnál növeli a db-t
             darabok.Text = db.ToString() + "db";
             osszeg.Text = fizetendo.ToString();
         }
@@ -78,18 +78,18 @@ namespace KávégépAutomata_Ulicny_Balássy
             Hide();
             Payment payment = new Payment(fizetendo);
             payment.ShowDialog();
-            for (int i = 0; i < db; i++)
+            Statisztika();
+            for (int i = 0; i < db; i++) //itt jön a videó megjelenítése
             {
                 Window1 video = new Window1();
                 video.ShowDialog();
             }
-            Statisztika();
             Close();
             // bezárja a programot
 
         }
 
-        private void Reset_Click(object sender, RoutedEventArgs e)
+        private void Reset_Click(object sender, RoutedEventArgs e) //Ez a reset gomb
         {
             fizetendo = 0;
             db = -1;
@@ -486,12 +486,12 @@ namespace KávégépAutomata_Ulicny_Balássy
 
         private void osszeg_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            //placeholder
         }
 
         private void db_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            //placeholder
         }
 
         private void cukorka_Click(object sender, RoutedEventArgs e)

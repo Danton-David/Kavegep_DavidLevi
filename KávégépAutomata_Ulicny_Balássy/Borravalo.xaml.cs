@@ -31,7 +31,7 @@ namespace KávégépAutomata_Ulicny_Balássy
             try
             {
                 //Egyedi borravaló értékének beállítása
-                int _egyedi = int.Parse(egyedi.Text);
+                int _egyedi = Math.Abs(int.Parse(egyedi.Text));
                 this.Ertek = _egyedi;
                 this.DialogResult = true;
 

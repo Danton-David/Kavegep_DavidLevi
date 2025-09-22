@@ -68,17 +68,20 @@ namespace KávégépAutomata_Ulicny_Balássy
             osszeg.Text = fizetendo.ToString();
         }
 
-        private void Pay_Click(object sender, RoutedEventArgs e) 
+        private void Pay_Click(object sender, RoutedEventArgs e)
         {
             Borravalo borravalo = new Borravalo();
             borravalo.ShowDialog();//Ez itt a felugró ablak a borravalóra
             fizetendo = ((fizetendo * (borravalo.Ertek / 100)) + fizetendo); // Ez hozzáadja a százalékot
-           
+
             beszedettpenz += fizetendo;
             Hide();
             Payment payment = new Payment(fizetendo);
             payment.ShowDialog();
             Statisztika();
+
+            UpdateRaktar();
+
             for (int i = 0; i < db; i++) //itt jön a videó megjelenítése
             {
                 Window1 video = new Window1();
@@ -86,7 +89,6 @@ namespace KávégépAutomata_Ulicny_Balássy
             }
             Close();
             // bezárja a programot
-
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e) //Ez a reset gomb
@@ -508,6 +510,18 @@ namespace KávégépAutomata_Ulicny_Balássy
                 cukorka.Background = new SolidColorBrush(Colors.Red); //piros lesz hogy láthatóbb legyen hogy valami baj van
                 osszeg.Text = "Nincs elég alapanyag"; // kiírjuk hogy nincs eleg alapanyag
             }
+        }
+        private void UpdateRaktar()
+        {
+            string[] sorok =
+            {
+                $"víz {viz}",
+                $"tej {tej}",
+                $"kávépor {kavepor}",
+                $"cukor {cukor}",
+                $"kakaópor {kakaopor}"
+            };
+            File.WriteAllLines("raktar.txt", sorok, Encoding.UTF8);
         }
     }
 }

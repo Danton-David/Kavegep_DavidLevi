@@ -1,5 +1,6 @@
 A felhasználói útmutató ez!
 
+A fejlesztői dokumentáció kommenteléssel történt!
 A vásárlás egy teljes nap lemenetét jelenti, ezzel a raktár is indításonként frissül.
 Megnyom egy tetszőleges kávéfajtát!
 Ha túl sokszor nyomja meg akkor piros lesz mer nem tud a gép annál többet csinálni!
